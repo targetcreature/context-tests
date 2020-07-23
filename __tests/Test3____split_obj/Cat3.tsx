@@ -1,5 +1,4 @@
-import { useSet } from "./context"
-import { useCat3 } from "./context/_cat3"
+import { setCat3, useCat3 } from "./context/_cat3"
 
 export const Cat3: React.FC = () => {
 
@@ -7,7 +6,7 @@ export const Cat3: React.FC = () => {
 
     console.log(id)
 
-    const set = useSet()
+    const set = setCat3()
 
     return (
         <div
@@ -27,7 +26,7 @@ export const Cat3: React.FC = () => {
                 }}
 
                 onClick={() => {
-                    set.cat3((draft) => {
+                    set((draft) => {
                         draft.name = "clicked"
                     })
                 }}

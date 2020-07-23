@@ -16,7 +16,6 @@
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typescript": "^3.9.7",
-    "use-immer": "^0.4.1"
+    "typescript": "^3.9.7"
   }
 }

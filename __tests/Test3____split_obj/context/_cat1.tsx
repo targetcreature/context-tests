@@ -1,14 +1,14 @@
 import { createContext, useContext } from 'react'
-import { useImmer } from 'use-immer'
+import { useImmer } from './__immer'
 import { MASTER } from './__master'
 
 const init = MASTER.cat1
 
 const initState = { ...init, init }
 
-type ISet = (f: (draft: typeof initState) => void) => void
+type ISet = (f: (draft: typeof initState) => void) => typeof init
 
-const Context = createContext<typeof init>(init)
+const Context = createContext(init)
 const SetContext = createContext<ISet>(() => null)
 
 export const Cat1Provider: React.FC = ({ children }) => {
